@@ -1,0 +1,28 @@
+<div class="main">
+  <div *ngIf="error">
+    <p>Error: {{ error }}</p>
+  </div>
+
+  <div class="posts-container" *ngIf="posts">
+    <ul>
+      <li *ngFor="let post of posts">
+        <div class="posts">
+          <div class="post">
+            <img
+              src="{{ post.node.thumbnail.url }}"
+              alt="thumbnail"
+              class="post-image"
+            />
+            <span class="post-title">{{ post.node.name }}</span>
+            <span class="post-description">{{ post.node.tagline }}</span>
+            <span class="post-date">{{ post.node.createdAt }}</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="pie-chart-container">
+    <!-- angular chart to display the number of posts in each topic from the fetched posts  -->
+  </div>
+</div>

@@ -1,7 +1,7 @@
 /* Styling for the main container using CSS Grid */
 .main {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 2fr 2fr;
   grid-gap: 10px;
   align-items: start;
 
@@ -27,22 +27,27 @@ ul {
 }
 
 .posts-container {
-  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0 10px;
-  border: 1px solid #ddd;
   border-radius: 5px;
   max-width: 600px;
 }
 
 .main .posts {
-  display: flex;
-  align-items: center;
+  display: block;
+  padding: 10px;
+  ;
 }
 
 .post {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 10px 0;
+  gap: 5px;
 }
 
 .post-image {
@@ -53,18 +58,27 @@ ul {
   border-radius: 5px;
 }
 
+.post-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  gap: 10px;
+  flex: 1;
+}
+
 .post-title {
   font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .post-description {
   color: #333;
-  margin-left: 10px;
 }
 
 .post-date {
-  margin-left: auto;
   color: #777;
+  margin-top: 12px;
 }
 
 /* Styling for the pie chart container with fixed position */
@@ -72,12 +86,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   padding: 10px;
+  margin: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   position: sticky;
   top: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
+  max-width: 800px;
 }

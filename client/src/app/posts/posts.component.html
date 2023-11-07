@@ -1,4 +1,10 @@
-<div class="main">
+<div
+  class="main"
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="500"
+  (scrolled)="onScroll()"
+>
   <div *ngIf="error">
     <p>Error: {{ error }}</p>
   </div>
@@ -20,6 +26,8 @@
         </div>
       </li>
     </ul>
+
+    <div *ngIf="isLoading">Loading...</div>
   </div>
 
   <div class="pie-chart-container">

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     GraphQLModule,
     HttpClientModule,
     InfiniteScrollModule,
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

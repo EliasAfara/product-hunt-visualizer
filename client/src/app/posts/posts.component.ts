@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { GET_POSTS } from '../graphql.operations';
 import { ChartComponent } from 'ng-apexcharts';
+import * as dayjs from 'dayjs';
 
 import {
   ApexNonAxisChartSeries,
@@ -64,6 +65,7 @@ export class PostsComponent implements OnInit {
   @ViewChild('chart')
   chart: ChartComponent | any;
   public chartOptions: Partial<ChartOptions> | any;
+  public dayjs = dayjs;
 
   posts: PostEdge[] = [];
   error: any;

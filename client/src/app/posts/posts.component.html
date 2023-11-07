@@ -21,7 +21,9 @@
             />
             <span class="post-title">{{ post.node.name }}</span>
             <span class="post-description">{{ post.node.tagline }}</span>
-            <span class="post-date">{{ post.node.createdAt }}</span>
+            <span class="post-date">{{
+              dayjs(post.node.createdAt).format("DD/MM/YYYY")
+            }}</span>
           </div>
         </div>
       </li>

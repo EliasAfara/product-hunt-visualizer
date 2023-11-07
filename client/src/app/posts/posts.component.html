@@ -32,5 +32,13 @@
 
   <div class="pie-chart-container">
     <!-- angular chart to display the number of posts in each topic from the fetched posts  -->
+    <apx-chart
+      #chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [labels]="chartOptions.labels"
+      [responsive]="chartOptions.responsive"
+      [plotOptions]="chartOptions.plotOptions"
+    ></apx-chart>
   </div>
 </div>

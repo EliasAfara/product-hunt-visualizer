@@ -79,6 +79,6 @@ export async function fetchPosts(
     );
   }
 
-  const responseData: PostConnection = await response.json();
+  const responseData: any = await response.json();
   return responseData.data.posts;
 }

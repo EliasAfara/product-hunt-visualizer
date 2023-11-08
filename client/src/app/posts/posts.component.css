@@ -1,14 +1,22 @@
 /* Styling for the main container using CSS Grid */
 .main {
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 2fr;
   grid-gap: 10px;
   align-items: start;
 
   /* Optional: Set a max-width for the main container to prevent it from becoming too wide */
-  max-width: 1500px;
+  max-width: 1300px;
   margin: 0 auto;
   margin-top: 60px;
+  padding: 10px;
+}
+
+.posts-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 10px;
+  align-items: start;
   padding: 10px;
 }
 
@@ -43,6 +51,8 @@ ul {
 }
 
 .post {
+  height: 100px;
+  width: 520px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -60,10 +70,11 @@ ul {
 
 .post-content {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   margin-right: 10px;
-  gap: 10px;
   flex: 1;
+  height: 100%;
 }
 
 .post-title {
@@ -78,7 +89,13 @@ ul {
 
 .post-date {
   color: #777;
-  margin-top: 12px;
+}
+
+.post-action {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Styling for the pie chart container with fixed position */

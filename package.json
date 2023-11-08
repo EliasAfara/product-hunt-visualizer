@@ -1,0 +1,13 @@
+{
+  "name": "product-hunt-visualizer",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "cd client && npm start & cd server && npm start",
+    "start": "cd server/dist && node index.js",
+    "prebuild": "cd server && npm run build",
+    "build": "cd client && npm run build"
+  }
+}

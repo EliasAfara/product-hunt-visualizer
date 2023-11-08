@@ -94,20 +94,26 @@ export class PostsComponent implements OnInit {
         query: GET_POSTS,
         variables: this.variables,
       })
-      .valueChanges.subscribe(({ data, error }: any) => {
-        // Update posts and error data
-        this.posts = data.posts.edges;
-        this.error = error;
+      .valueChanges.subscribe(
+        ({ data, error }: any) => {
+          // Update posts and error data
+          this.posts = data.posts.edges;
+          this.error = error;
 
-        // Update the cursor for the next fetch
-        this.last_post = data.posts.edges[data.posts.edges.length - 1].cursor;
+          // Update the cursor for the next fetch
+          this.last_post = data.posts.edges[data.posts.edges.length - 1].cursor;
 
-        // Count the topics
-        this.countTopics(data.posts.edges);
+          // Count the topics
+          this.countTopics(data.posts.edges);
 
-        // Complete the loading process
-        this.toggleLoading();
-      });
+          // Complete the loading process
+          this.toggleLoading();
+        },
+        (error) => {
+          console.error('There was an error sending the query', error);
+          this.toggleLoading();
+        }
+      );
   }
 
   countTopics = (data: PostEdge[]) => {
@@ -124,8 +130,6 @@ export class PostsComponent implements OnInit {
 
     this.chartOptions.labels = Object.keys(this.topics);
     this.chartOptions.series = Object.values(this.topics);
-
-    console.log(this.topics);
   };
 
   // Append more posts data when scrolling
@@ -163,6 +167,10 @@ export class PostsComponent implements OnInit {
   // Handle the scroll event
   onScroll() {
     this.appendPostsData();
+  }
+
+  openUrl(url: string) {
+    window.open(url, '_blank');
   }
 
   constructor(private apollo: Apollo) {

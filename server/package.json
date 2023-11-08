@@ -2,7 +2,7 @@
   "name": "product-hunt-visualizer-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon --exec tsx index.ts",

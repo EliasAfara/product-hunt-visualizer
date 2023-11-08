@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { GraphQLModule } from './graphql.module';
 
@@ -19,6 +21,8 @@ import { PostsComponent } from './posts/posts.component';
     InfiniteScrollModule,
     NgApexchartsModule,
     MatProgressSpinnerModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

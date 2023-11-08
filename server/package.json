@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --exec tsx index.ts"
+    "start": "nodemon --exec tsx index.ts",
+    "build": "npm install && tsc -p ."
   },
   "author": "Elias Afara",
   "license": "ISC",

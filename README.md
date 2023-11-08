@@ -2,6 +2,8 @@
 
 A web application built with Angular, Node.js, TypeScript, and GraphQL. It fetches and visualizes data from the [Product Hunt API](https://api.producthunt.com/v2/docs).
 
+<img width="1495" alt="Product Hunt Visualizer" src="https://github.com/EliasAfara/product-hunt-visualizer/assets/39487200/54dc42da-0231-4f58-8803-ea583ccf104a">
+
 ## Features
 
 - **Data Visualization**: Displays Product Hunt data in an easy-to-understand format.
